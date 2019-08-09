@@ -4,7 +4,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class CounterServiceService {
+export class CounterService {
   private count = 0;
 
   private subject: BehaviorSubject<number>;
@@ -27,12 +27,12 @@ export class CounterServiceService {
     this.notify();
   }
 
-  notify() {
-    this.subject.next(this.count);
-  }
-
-  private set(newCount: number) {
+  reset(newCount: number) {
     this.count = newCount;
     this.notify();
+  }
+
+  private notify() {
+    this.subject.next(this.count);
   }
 }
