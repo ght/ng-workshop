@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test1';
+  public title = 'test1';
+
+  public logCount(count: number) {
+    console.log(`Count is ${count}.`);
+  }
 }

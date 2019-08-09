@@ -1,0 +1,7 @@
+<div>
+  <span>{{ count }}</span>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <input #input type="number" [value]="initialCount">
+  <button (click)="set(input.value)">set</button>
+</div>
