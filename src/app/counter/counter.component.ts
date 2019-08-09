@@ -38,7 +38,7 @@ export class CounterComponent implements OnChanges {
     this.emitChange();
   }
 
-  public set(value: string) {
+  public reset(value: string) {
     this.count = parseInt(value, 10);
   }
 }
