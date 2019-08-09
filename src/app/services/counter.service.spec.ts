@@ -39,6 +39,6 @@ describe('CounterService', () => {
   it('resets the count', () => {
     const newCount = 1234;
     counterService.reset(newCount);
-    expectCount(newCount)
+    expectCount(newCount);
   });
 });

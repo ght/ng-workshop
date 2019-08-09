@@ -28,13 +28,14 @@ export class CounterComponent implements OnChanges {
     this.countChange.emit(this.count);
   }
 
-  public decrement() {
-    this.count -= 1;
+  public increment() {
+    console.log(`inc. new count: ${this.count}`);
+    this.count += 1;
     this.emitChange();
   }
 
-  public increment() {
-    this.count += 1;
+  public decrement() {
+    this.count -= 1;
     this.emitChange();
   }
 
