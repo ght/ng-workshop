@@ -7,7 +7,7 @@ import { CounterService } from '../services/counter.service';
 @Component({
   selector: 'app-service-counter',
   templateUrl: './service-counter.component.html',
-  styleUrls: ['./service-counter.component.scss']
+  styleUrls: ['./service-counter.component.scss'],
 })
 export class ServiceCounterComponent {
   public count$: Observable<CounterState>;
