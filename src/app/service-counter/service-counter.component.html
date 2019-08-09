@@ -1,0 +1,7 @@
+<div>
+  <span>Service counter: <strong data-qa="count">{{ count$ | async }}</strong></span>
+  <button (click)="increment()" data-qa="increment-button">+</button>
+  <button (click)="decrement()" data-qa="decrement-button">-</button>
+  <input #input type="number" data-qa="reset-input">
+  <button (click)="reset(input.value)" data-qa="reset-button">set</button>
+</div>
