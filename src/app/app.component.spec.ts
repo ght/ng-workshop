@@ -1,11 +1,29 @@
 import { TestBed, async } from '@angular/core/testing';
+import { StoreModule } from '@ngrx/store';
+
+import { reducers } from './reducers';
+
 import { AppComponent } from './app.component';
+import { CounterComponent } from './counter/counter.component';
+import { NgRxCounterComponent } from './ngrx-counter/ngrx-counter.component';
+import { ServiceCounterComponent } from './service-counter/service-counter.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        CounterComponent,
+        ServiceCounterComponent,
+        NgRxCounterComponent,
+      ],
+      imports: [
+        StoreModule.forRoot(reducers, {
+          runtimeChecks: {
+            strictActionImmutability: true,
+            strictStateImmutability: true,
+          },
+        }),
       ],
     }).compileComponents();
   }));
