@@ -1,7 +1,5 @@
-<div>
-  <span>{{ count }}</span>
-  <button (click)="increment()">+</button>
-  <button (click)="decrement()">-</button>
-  <input #input type="number" [value]="initialCount">
-  <button (click)="reset(input.value)">set</button>
-</div>
+<span>Simple counter: <strong data-qa="count">{{ count }}</strong></span>
+<button (click)="increment()" data-qa="increment-button">+</button>
+<button (click)="decrement()" data-qa="decrement-button">-</button>
+<input type="number" #input [value]="initialCount" data-qa="reset-input">
+<button (click)="reset(input.value)" data-qa="reset-button">set</button>

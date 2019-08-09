@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title = 'test1';
-  public initialCounts = [0, 10, 42, -100];
+  public initialCounts = [0, 42, Number.MAX_SAFE_INTEGER, Number.MIN_SAFE_INTEGER];
 }
